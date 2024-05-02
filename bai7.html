@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newArray = [1,2,3,4,4,5,7,4,4,6];
+    // for (let i = 0; i < Math.floor(Math.random() * 20) ; i++) {
+    //     newArray.push(Math.floor( getRndInteger(0, 10)));
+    // }
+    // document.write(newArray);
+    // function getRndInteger(min, max) {
+    //     return Math.floor(Math.random() * (max - min + 1) ) + min;
+    // }
+    document.write(newArray);
+    let inputNum = +prompt('Enter a number:');
+    for (let i = 0; i < newArray.length; i++) {
+        if (newArray[i] === inputNum) {
+            for (let j=i; j< newArray.length; j++) {
+                newArray[j] = newArray[j+1];
+            }
+            newArray.length--;
+            i--;
+        }
+    }
+    document.write("<br>" +newArray);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newArray = [];
+    for (let i = 0; i < 10 ; i++) {
+        newArray.push(Math.floor( Math.random() * 20));
+    }
+    document.write(newArray);
+    let temp=0;
+    for (let i = 0; i < newArray.length; i++) {
+        for (let j = i; j < newArray.length; j++) {
+            if (newArray[j] > newArray[i]) {
+                temp = newArray[i];
+                newArray[i] = newArray[j];
+                newArray[j] = temp;
+            }
+        }
+    }
+    document.write("<br>" + newArray);
+
+</script>
+</body>
+</html>

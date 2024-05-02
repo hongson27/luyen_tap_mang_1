@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newArray = [];
+    for (let i = 0; i < 10 ; i++) {
+        newArray.push(Math.floor( Math.random() * 20));
+    }
+    document.write(newArray);
+    let max = newArray[0];
+    let average = 0;
+    for (let i = 1; i < newArray.length; i++) {
+        if (max < newArray[i]) {
+            max = newArray[i];
+        }
+        average += newArray[i];
+    }
+    document.write('<br>'+'So lon nhat la ' + max);
+    document.write('<br>'+'Trung binh cong la '+ average/newArray.length);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newArray = [];
+    for (let i = 0; i < Math.floor(Math.random() * 20) ; i++) {
+        newArray.push(Math.floor( getRndInteger(-10, 10)));
+    }
+    document.write(newArray);
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+    let count =0;
+    for  (let i = 0; i < newArray.length; i++) {
+        if (newArray[i] < 0){
+            count++;
+        }
+    }
+    document.write("<br>" + 'So phan tu nho hon 0 la: ' + count);
+</script>
+</body>
+</html>

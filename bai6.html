@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newArray = [];
+    for (let i = 0; i < Math.floor(Math.random() * 20) ; i++) {
+        newArray.push(Math.floor( getRndInteger(-10, 10)));
+    }
+    document.write(newArray);
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+    let inputNum = +prompt('Enter a number:');
+    for (let i = 0; i < newArray.length; i++) {
+        if (newArray[i] === inputNum) {
+            document.write("<br>" + inputNum +' is in index');
+            break;
+        } else {
+            document.write("<br>" + inputNum +' is not in index');
+            break;
+        }
+    }
+</script>
+</body>
+</html>

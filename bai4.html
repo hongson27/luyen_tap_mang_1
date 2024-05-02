@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newArray = [];
+    let arrayLength = +prompt('Nhap so phan tu cua mang: ');
+    for (let i = 0; i < arrayLength; i++) {
+        newArray[i] = +prompt('Nhap gia tri so ' + i + ' :' );
+    }
+    document.write(newArray + "<br>");
+ let first = 0;
+ let last = newArray.length - 1;
+ while (first<last) {
+     a = newArray[first];
+     newArray[first] = newArray[last];
+     newArray[last] = a;
+     first++;
+     last--;
+ }
+ document.write(newArray + "<br>");
+</script>
+</body>
+</html>

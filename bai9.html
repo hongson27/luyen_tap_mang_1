@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let newArray1 = [];
+    let newArray2 = [];
+let newArray3 = [];
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+
+    for (let i = 0; i < Math.floor(Math.random() * 20) ; i++) {
+        newArray1.push(Math.floor( getRndInteger(-10, 10)));
+    }
+    document.write(newArray1);
+    for (let i = 0; i < Math.floor(Math.random() * 20) ; i++) {
+        newArray2.push(Math.floor( getRndInteger(-10, 10)));
+    }
+    document.write("<br>" + newArray2);
+let lengthParent = 0;
+let temp = 0;
+    if (newArray1.length > newArray2.length) {
+        lengthParent = newArray1.length;
+        temp= 1;
+    } else {
+        lengthParent = newArray2.length;
+        temp= 2;
+    }
+    for (let i = 0; i< lengthParent ; i++) {
+        if (temp === 1) {
+            newArray3[i] = newArray1[i];
+            newArray3[i + newArray1.length] = newArray2[i];
+            newArray3.length = newArray1.length + newArray2.length;
+        } else {
+            newArray3[i] = newArray2[i];
+            newArray3[i + newArray2.length] = newArray1[i];
+            newArray3.length = newArray1.length + newArray2.length;
+        }
+
+    }
+    document.write("<br>" + newArray3);
+</script>
+</body>
+</html>
